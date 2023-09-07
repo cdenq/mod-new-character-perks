@@ -91,191 +91,201 @@ public:
                 // Define Equipment
                 uint32 shoulders = 0, chest = 0, trinket = 0, weapon = 0, weapon2 = 0, weapon3 = 0, shoulders2 = 0, chest2 = 0, trinket2 = 0;
                 // const uint32 bag = 23162;		// Foror's Crate of Endless Resist Gear Storage (36 Slot)
-                const uint32 ring = 50255;		// Dread Pirate Ring (5% XP Boost)
+                const uint32 bag = 4500;		// Traveler's Backpack (16 Slot)
+                const uint32 portal = 999999;		// Pocket Portal
+                // const uint32 ring = 50255;		// Dread Pirate Ring (5% XP Boost)
 
                 // Outfit the character with bags and heirlooms that match their class
                 // NOTE: Some classes have more than one heirloom option per slot
-                switch (player->getClass())
-                {
+                // switch (player->getClass())
+                // {
 
-                case CLASS_WARRIOR:
-                    shoulders = 42949;
-                    chest = 48685;
-                    trinket = 42991;
-                    weapon = 42943;
-                    weapon2 = 44092;
-                    weapon3 = 44093;
-                    break;
+                // case CLASS_WARRIOR:
+                //     shoulders = 42949;
+                //     chest = 48685;
+                //     trinket = 42991;
+                //     weapon = 42943;
+                //     weapon2 = 44092;
+                //     weapon3 = 44093;
+                //     break;
 
-                case CLASS_PALADIN:
-                    shoulders = 42949;
-                    chest = 48685;
-                    trinket = 42991;
-                    weapon = 42945;
-                    weapon2 = 44092;
-                    break;
+                // case CLASS_PALADIN:
+                //     shoulders = 42949;
+                //     chest = 48685;
+                //     trinket = 42991;
+                //     weapon = 42945;
+                //     weapon2 = 44092;
+                //     break;
 
-                case CLASS_HUNTER:
-                    shoulders = 42950;
-                    chest = 48677;
-                    trinket = 42991;
-                    weapon = 42943;
-                    weapon2 = 42946;
-                    weapon3 = 44093;
-                    break;
+                // case CLASS_HUNTER:
+                //     shoulders = 42950;
+                //     chest = 48677;
+                //     trinket = 42991;
+                //     weapon = 42943;
+                //     weapon2 = 42946;
+                //     weapon3 = 44093;
+                //     break;
 
-                case CLASS_ROGUE:
-                    shoulders = 42952;
-                    chest = 48689;
-                    trinket = 42991;
-                    weapon = 42944;
-                    weapon2 = 42944;
-                    break;
+                // case CLASS_ROGUE:
+                //     shoulders = 42952;
+                //     chest = 48689;
+                //     trinket = 42991;
+                //     weapon = 42944;
+                //     weapon2 = 42944;
+                //     break;
 
-                case CLASS_PRIEST:
-                    shoulders = 42985;
-                    chest = 48691;
-                    trinket = 42992;
-                    weapon = 42947;
-                    break;
+                // case CLASS_PRIEST:
+                //     shoulders = 42985;
+                //     chest = 48691;
+                //     trinket = 42992;
+                //     weapon = 42947;
+                //     break;
 
-                case CLASS_DEATH_KNIGHT:
-                    shoulders = 42949;
-                    chest = 48685;
-                    trinket = 42991;
-                    weapon = 42945;
-                    weapon2 = 44092;
-                    weapon3 = 42943;
-                    break;
+                // case CLASS_DEATH_KNIGHT:
+                //     shoulders = 42949;
+                //     chest = 48685;
+                //     trinket = 42991;
+                //     weapon = 42945;
+                //     weapon2 = 44092;
+                //     weapon3 = 42943;
+                //     break;
 
-                case CLASS_SHAMAN:
-                    shoulders = 42951;
-                    chest = 48683;
-                    trinket = 42992;
-                    weapon = 42948;
-                    shoulders2 = 42951;
-                    chest2 = 48683;
-                    weapon2 = 42947;
-                    break;
+                // case CLASS_SHAMAN:
+                //     shoulders = 42951;
+                //     chest = 48683;
+                //     trinket = 42992;
+                //     weapon = 42948;
+                //     shoulders2 = 42951;
+                //     chest2 = 48683;
+                //     weapon2 = 42947;
+                //     break;
 
-                case CLASS_MAGE:
-                    shoulders = 42985;
-                    chest = 48691;
-                    trinket = 42992;
-                    weapon = 42947;
-                    break;
+                // case CLASS_MAGE:
+                //     shoulders = 42985;
+                //     chest = 48691;
+                //     trinket = 42992;
+                //     weapon = 42947;
+                //     break;
 
-                case CLASS_WARLOCK:
-                    shoulders = 42985;
-                    chest = 48691;
-                    trinket = 42992;
-                    weapon = 42947;
-                    break;
+                // case CLASS_WARLOCK:
+                //     shoulders = 42985;
+                //     chest = 48691;
+                //     trinket = 42992;
+                //     weapon = 42947;
+                //     break;
 
-                case CLASS_DRUID:
-                    shoulders = 42984;
-                    chest = 48687;
-                    trinket = 42992;
-                    weapon = 42948;
-                    shoulders2 = 42952;
-                    chest2 = 48689;
-                    trinket2 = 42991;
-                    weapon2 = 48718;
-                    break;
+                // case CLASS_DRUID:
+                //     shoulders = 42984;
+                //     chest = 48687;
+                //     trinket = 42992;
+                //     weapon = 42948;
+                //     shoulders2 = 42952;
+                //     chest2 = 48689;
+                //     trinket2 = 42991;
+                //     weapon2 = 48718;
+                //     break;
 
-                default:
-                    break;
-                }
+                // default:
+                //     break;
+                // }
 
                 // Hand out the heirlooms. I prefer only the ring and trinkets for new characters.
                 switch (player->getClass())
                 {
 
                 case CLASS_DEATH_KNIGHT:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(weapon2, 1);
                     //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_PALADIN:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_WARRIOR:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(weapon2, 1);
                     //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_HUNTER:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(weapon2, 1);
                     //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_ROGUE:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_DRUID:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(trinket2, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(trinket2, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(shoulders2, 1);
                     //player->AddItem(chest2, 1);
                     //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 case CLASS_SHAMAN:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
                     //player->AddItem(shoulders2, 1);
                     //player->AddItem(chest2, 1);
                     //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
 
                 default:
-                    player->AddItem(trinket, 2);
-                    player->AddItem(ring, 1);
+                    // player->AddItem(trinket, 2);
+                    // player->AddItem(ring, 1);
                     //player->AddItem(shoulders, 1);
                     //player->AddItem(chest, 1);
                     //player->AddItem(weapon, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(bag, 4);
+                    player->AddItem(portal, 1);
                     break;
                 }
 
@@ -315,7 +325,7 @@ public:
 
                 case CLASS_PALADIN:
                     player->learnSpell(196);	// Axes
-                    player->learnSpell(750);	// Plate Mail
+                    // player->learnSpell(750);	// Plate Mail
                     player->learnSpell(200);	// PoleArms
                     player->learnSpell(197);	// 2H Axe
                     player->learnSpell(199);	// 2H Mace
@@ -323,7 +333,7 @@ public:
 
                 case CLASS_SHAMAN:
                     player->learnSpell(15590);	// Fists
-                    player->learnSpell(8737);	// Mail
+                    // player->learnSpell(8737);	// Mail
                     player->learnSpell(196);	// Axes
                     player->learnSpell(197);	// 2H Axe
                     player->learnSpell(199);	// 2H Mace
@@ -332,20 +342,20 @@ public:
                 case CLASS_WARRIOR:
                     player->learnSpell(264);	// Bows
                     player->learnSpell(5011);	// Crossbow
-                    player->learnSpell(674);	// Dual Wield
+                    // player->learnSpell(674);	// Dual Wield
                     player->learnSpell(15590);	// Fists
                     player->learnSpell(266);	// Guns
-                    player->learnSpell(750);	// Plate Mail
+                    // player->learnSpell(750);	// Plate Mail
                     player->learnSpell(200);	// PoleArms
                     player->learnSpell(199);	// 2H Mace
                     player->learnSpell(227);	// Staves
                     break;
 
                 case CLASS_HUNTER:
-                    player->learnSpell(674);	// Dual Wield
+                    // player->learnSpell(674);	// Dual Wield
                     player->learnSpell(15590);	// Fists
                     player->learnSpell(266);	// Guns
-                    player->learnSpell(8737);	// Mail
+                    // player->learnSpell(8737);	// Mail
                     player->learnSpell(200);	// PoleArms
                     player->learnSpell(227);	// Staves
                     player->learnSpell(202);	// 2H Sword
